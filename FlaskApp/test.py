@@ -7,6 +7,8 @@ from datetime import timedelta
 from flask import make_response, request, current_app
 from functools import update_wrapper
 
+import json
+
 
 def crossdomain(origin=None, methods=None, headers=None,
                 max_age=21600, attach_to_all=True,
@@ -52,7 +54,9 @@ def crossdomain(origin=None, methods=None, headers=None,
 @app.route("/", methods=['GET','POST','OPTIONS'])
 @crossdomain(origin="*")
 def helloWorld():
-  return "Hello, cross-origin-world!"
+    resp = request.get_json()
+    print(resp)
+    return "hi"
 
 
 

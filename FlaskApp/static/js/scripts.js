@@ -1,13 +1,12 @@
 $(function(){
 	$('button').click(function(){
-		var user = $('#txtUsername').val();
-		var pass = $('#txtPassword').val();
+		var data = {"test1":"hi!"};
 		$.ajax({
-			url: 'http://localhost:5000/',
-			data: "",
-			type: 'POST',
-			success: function(response){
-				console.log(response);
+			type : "POST",
+			url :'http://localhost:5000',
+			data: data,
+			success: function(result) {
+				console.log(result);
 			},
 			error: function(error){
 				console.log(error);

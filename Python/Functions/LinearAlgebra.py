@@ -2,13 +2,13 @@ import math
 def vector_add(params):
     return [v_i + w_i
             for v_i, w_i in zip(params[0],params[1])]
-def vector_subtract(v,w):
+def vector_subtract(params):
     return [v_i-w_i
-            for v_i, w_i in zip(v,w)]
+            for v_i, w_i in zip(params[0],params[1])]
 def vector_sum(vectors):
     result = vectors[0]
     for vector in vectors[1:]:
-        result = vector_add(result, vector)
+        result = vector_add([result, vector])
     return result
 def scalar_multiply(c,v):
     return [c*v_i for v_i in v]

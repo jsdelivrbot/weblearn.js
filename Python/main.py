@@ -69,7 +69,12 @@ def run():
 		print (v1)
 		print (v2)
 		result = linAlg.vector_add(v1,v2)
-	return ''.join(str(e) for e in result)
+	elif(function=="vector_add"):
+		print (parameters)
+		result = "hi"
+	else:
+		result = "an error occurred"
+	return ','.join(str(e) for e in result)
 
 
 

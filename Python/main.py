@@ -11,6 +11,7 @@ from Functions import LinearAlgebra as linAlg
 
 import json
 
+params = " "
 
 def crossdomain(origin=None, methods=None, headers=None,
                 max_age=21600, attach_to_all=True,
@@ -56,24 +57,18 @@ def crossdomain(origin=None, methods=None, headers=None,
 @app.route("/", methods=['GET','POST','OPTIONS'])
 @crossdomain(origin="*")
 def run():
-	parameters = request.form['params']
+	paramsRawVal = request.form['params']
 	function = request.form['function']
+	parametersexec = "global params; params=" + paramsRawVal
+	print (parametersexec)
+	exec(parametersexec)
+	print (params)
+	print([[1,1,1],[2,2,2]])
 	#print (parameters)
 	if(function=="vector_add()"):
-		closeInd = parameters.index("]")
-		openInd = parameters.index("[",2)
-		v1str = parameters[1:closeInd]
-		v2str = parameters[(openInd+1):(len(parameters)-1)]
-		v1 = [int(s) for s in v1str.split(',')]
-		v2 = [int(s) for s in v2str.split(',')]
-		print (v1)
-		print (v2)
-		result = linAlg.vector_add(v1,v2)
-	elif(function=="vector_add"):
-		print (parameters)
-		result = "hi"
+		result = linAlg.vector_add(params)
 	else:
-		result = "an error occurred"
+		result = "an error occurred or no value was returned"
 	return ','.join(str(e) for e in result)
 
 

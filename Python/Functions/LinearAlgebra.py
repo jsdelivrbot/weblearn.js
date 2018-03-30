@@ -1,7 +1,7 @@
 import math
-def vector_add(v,w):
+def vector_add(params):
     return [v_i + w_i
-            for v_i, w_i in zip(v,w)]
+            for v_i, w_i in zip(params[0],params[1])]
 def vector_subtract(v,w):
     return [v_i-w_i
             for v_i, w_i in zip(v,w)]

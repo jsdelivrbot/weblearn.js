@@ -55,11 +55,20 @@ def crossdomain(origin=None, methods=None, headers=None,
 
 @app.route("/", methods=['GET','POST','OPTIONS'])
 @crossdomain(origin="*")
-def helloWorld():
-	name = request.form['name']
-	email = request.form['email']
-	result = linAlg.vector_add([1,1,1],[2,2,2])
-	print(result)
+def run():
+	parameters = request.form['params']
+	function = request.form['function']
+	#print (parameters)
+	if(function=="vector_add()"):
+		closeInd = parameters.index("]")
+		openInd = parameters.index("[",2)
+		v1str = parameters[1:closeInd]
+		v2str = parameters[(openInd+1):(len(parameters)-1)]
+		v1 = [int(s) for s in v1str.split(',')]
+		v2 = [int(s) for s in v2str.split(',')]
+		print (v1)
+		print (v2)
+		result = linAlg.vector_add(v1,v2)
 	return ''.join(str(e) for e in result)
 
 

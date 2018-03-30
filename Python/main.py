@@ -1,5 +1,3 @@
-import sys
-from Functions import LinearAlgebra as linAlg
 from flask import Flask
 from flask_cors import CORS, cross_origin
 from flask_restful import Api
@@ -8,6 +6,8 @@ app = Flask(__name__)
 from datetime import timedelta
 from flask import make_response, request, current_app
 from functools import update_wrapper
+
+from Functions import LinearAlgebra as linAlg
 
 import json
 
@@ -56,9 +56,11 @@ def crossdomain(origin=None, methods=None, headers=None,
 @app.route("/", methods=['GET','POST','OPTIONS'])
 @crossdomain(origin="*")
 def helloWorld():
-    resp = request.get_json()
-    print(resp)
-    return "hi"
+	name = request.form['name']
+	email = request.form['email']
+	result = linAlg.vector_add([1,1,1],[2,2,2])
+	print(result)
+	return ''.join(str(e) for e in result)
 
 
 

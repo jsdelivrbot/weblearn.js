@@ -26,35 +26,45 @@ def vector_sum(vectors):
     for vector in vectors[1:]:
         result = vector_add([result, vector])
     return result
-def scalar_multiply(c,v):
-    return [c*v_i for v_i in v]
+def scalar_multiply(params):
+    return [params[0]*v_i for v_i in params[1]]
 def vector_mean(vector):
     n = len(vectors)
-    return scalar_multiply(1/n, vector_sum(vectors))
-def dot(v,w):
+    return scalar_multiply([1/n, vector_sum(vectors)])
+def dot(params):
     return sum(v_i*w_i
-                for v_i, w_i in zip(v,w))
+                for v_i, w_i in zip(params[0],params[1]))
 def sum_of_squares(v):
-    return dot(v,v)
+    return dot([v,v])
 def magnitude(v):
     return math.sqrt(sum_of_squares(v))
-def squared_distance(v,w):
-    return sum_of_squares(vector_subtract(v,w))
-def distance(v,w):
-    return math.sqrt(squared_distance(v,w))
+def squared_distance(params):
+    return sum_of_squares(vector_subtract(params[0],params[1]))
+def distance(params):
+    return math.sqrt(squared_distance([params[0],params[1]]))
 def shape(A):
     num_rows = len(A)
     num_cols = len(A[0])
     return num_rows,num_cols
-def get_row(A, i):
+def get_row(params):
+    A = params[0]
+    i = params[1]
     return A[i]
-def get_column(A, j):
+def get_column(params):
+    A = params[0]
+    i = params[1]
     return [A_i[j]
-            for A_i in A]
-def make_matrix(num_rows, num_cols, entry_fn):
+        for A_i in A]
+def make_matrix(params):
+    num_rows=params[0]
+    num_cols=params[1]
+    entry_fun=params[2]
     return [[entry_fn(i,j)
-            for j in range(num_cols)]
+        for j in range(num_cols)]
             for i in range(num_rows)]
+
+def is_diagonal(i,j):
+	return 1 if i==j else 0
 
 
 def crossdomain(origin=None, methods=None, headers=None,

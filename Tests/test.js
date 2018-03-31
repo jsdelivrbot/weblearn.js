@@ -1,5 +1,5 @@
-var funcID = "get_row";
-var params = "[[[1,1,1],[2,2,2],[3,3,3]],1]"
+var funcID = "vector_add"
+var params = "[[4,4,4],[1,1,1]]"
 
 function buttonClicked(){
     weblearn(funcID,params);

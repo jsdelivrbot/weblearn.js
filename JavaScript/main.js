@@ -5,7 +5,7 @@ function weblearn(funcID,params){
 function asyncStuff(funcID,params){
   $.ajax({
       type : "POST",
-      url :'http://localhost:5000',
+      url :'http://prathgan.pythonanywhere.com/',
       data: {
         function: funcID,
         params : params

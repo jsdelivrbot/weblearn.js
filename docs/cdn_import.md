@@ -1,1 +1,1 @@
-https://cdn.rawgit.com/prathgan/weblearn.js/6ff4e072/JavaScript/main.js
+https://cdn.rawgit.com/prathgan/weblearn.js/7b8f8352/JavaScript/main.js

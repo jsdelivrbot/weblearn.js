@@ -1,10 +1,8 @@
 var funcID = "vector_add"
-var params = "[[4,4,4],[1,1,1]]"
+var params = "[[1,1,1],[2,2,2]]"
 
-function buttonClicked(){
-    weblearn(funcID,params);
-}
+weblearn(funcID,params);
 
-function process(param){
+function acceptWeblearnResult(param){
     console.log(param)
 }

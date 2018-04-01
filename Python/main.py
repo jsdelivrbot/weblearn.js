@@ -1,14 +1,17 @@
+from __future__ import division
 from flask import Flask
 from flask_cors import CORS, cross_origin
 from flask_restful import Api
-from __future__ import division
 app = Flask(__name__)
+#import sklearn
 
 from datetime import timedelta
 from flask import make_response, request, current_app
 from functools import update_wrapper
 
 from Functions import LinearAlgebra as linAlg
+
+import random
 
 import json
 
@@ -77,7 +80,7 @@ def median(v):
     n = len(v)
     sorted_v = sorted(v)
     midpoint = n//2
-    if n%2==1
+    if n%2==1:
         return sorted_v[midpoint]
     else:
         lo = midpoint-1
@@ -92,7 +95,7 @@ def mode(x):
     counts = Counter(x)
     max_count = max(counts.values())
     return[x_i for x_i, count in counts.iteriterms()
-            if count = max_count]
+            if count == max_count]
 def data_range(x):
     return max(x)-min(x)
 def de_mean(x):
@@ -120,6 +123,34 @@ def correlation(params):
         return covariance([x,y])/stdev_x / stdev_y
     else:
         return 0
+
+def bernoulli_trial(p):
+    return 1 if random.random() < p else 0
+
+def binomial(params):
+    n = params[0]
+    p = params[1]
+    return sum(bernoulli_trial(p) for _ in range(n))
+
+### Don't use make hist
+def make_hist(params):
+    p = params[0]
+    n = params[1]
+    num_points = params[2]
+    data = [binomial([n,p]) for _ in range(num_points)]
+    histogram = Counter(data)
+    plot.bar([x-0.4 for x in histogram.keys()],
+    [v/num_points for v in histogram.values()],
+    0.8,
+    color='0.75')
+    mu = p*normal_cdf
+    sigma = math.sqrt(n*p*(1-p))
+    xs = range(min(Data), max(data) + 1)
+    ys = [normal_cdf(i+0.5,mu,sigma) - normal_cdf(i-0.5,mu,sigma)
+            for i in xs]
+    plt.plot(xs,ys)
+    plt.title("Binomial Distribution vs. Normal APproximation")
+    plt.show()
 
 
 

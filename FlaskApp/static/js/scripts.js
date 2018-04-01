@@ -13,7 +13,7 @@ function asyncStuff(funcID,params){
 			success: function(result) {
 				var finalResult=result;
 				//var finalResult = (stringTo1DArray(result));
-				process(finalResult);
+				acceptWeblearnResult(finalResult);
 			},
 			error: function(error){
 				console.log(error);

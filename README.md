@@ -1,4 +1,4 @@
-WARNING: THIS README IS NOT COMPLETE
+WARNING: This documentation is incomplete
 # Weblearn.js
 Weblearn.js is a javascript library which allows web developers to perform advanced mathematical
 tasks and rudimentary machine learning in the browser. Recognizing that JavaScript is, in most cases,
@@ -8,7 +8,7 @@ web browsers, Weblearn funcionality is based entirely in Python on servers. Webl
 anything from education to face recognition. Read on for more information.
 
 ## Setup
-Setting up Weblearn for use on your website is as simple as a JavaScript import, simply paste `TODO: add script source tag` (valid as of build on 04/01/2018) <b>before</b> any other JavaScript imports or code in your HTML file. Then, anywhere you choose
+Setting up Weblearn for use on your website is as simple as a JavaScript import, simply paste `https://cdn.rawgit.com/prathgan/weblearn.js/92efdd52/JavaScript/weblearn.js` (valid as of build on 04/01/2018) <b>before</b> any other JavaScript imports or code in your HTML file. Then, anywhere you choose
 below that import, insert your script. For further clarification via an example, see <a href="https://github.com/prathgan/weblearn.js/Examples/computation.html">this file</a>.
 
 ## Use
@@ -26,6 +26,7 @@ function acceptWeblearnResult(result){
 ```
 This will output "3,3,3" in the console.
 #### Functions List and Other Information
+
 |    Function ID    |          Use          |                     Parameters                    |                                        Return                                        |
 |:-----------------:|:---------------------:|:-------------------------------------------------:|:------------------------------------------------------------------------------------:|
 | `vector_add`      | adds two vectors      | `[[vector_one],[vector_two]]`                     | a vector of length same as`vector_one` and `vector_two`, with the added values       |

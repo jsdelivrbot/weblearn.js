@@ -11,7 +11,15 @@ function asyncStuff(funcID,params){
         params : params
       },
       success: function(result) {
-        var finalResult=result;
+        if(funcID!="linear_regression"){
+          var finalResult = JSON.parse("[" + result + "]");
+        }
+        else if(funcID=="linear_regression"){
+          var finalResult = parseInt(result.substring(1,result.length-2));
+        }
+        else{
+          var finalResult = result;
+        }
         //var finalResult = (stringTo1DArray(result));
         acceptWeblearnResult(finalResult);
       },
@@ -33,7 +41,7 @@ function stringTo1DArray(inputStr){
     final[jsarrfillcnt]=parseInt(inputStr.charAt(i));
     jsarrfillcnt++;
   }
-  return final
+  acceptWeblearnResult(final);
 }
 
 function sleep(milliseconds) {

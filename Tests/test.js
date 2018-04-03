@@ -1,5 +1,5 @@
-var funcID = "vector_add"
-var params = "[[1,1,1],[2,2,2]]"
+var funcID = "linear_regression"
+var params = "[[[1],[2],[3],[4],[5],[6],[7],[8],[9]],[[1],[2],[3],[4],[5],[6],[7],[8],[9]],10]"
 
 weblearn(funcID,params);
 

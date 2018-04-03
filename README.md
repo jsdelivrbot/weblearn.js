@@ -9,7 +9,7 @@ anything from education to face recognition. Read on for more information.
 
 ## Setup
 Setting up Weblearn for use on your website is as simple as a JavaScript import, simply paste `<script src="https://cdn.rawgit.com/prathgan/weblearn.js/2b4682e4c77480922d4816280c08162a2da42177/JavaScript/weblearn.js"></script>` (valid as of build on 04/02/2018) <b>before</b> any other JavaScript imports or code in your HTML file. Then, anywhere you choose
-below that import, insert your script. For further clarification via an example, see <a href="https://github.com/prathgan/weblearn.js/Examples/computation.html">this file</a>.
+below that import, insert your script.
 
 ## Use
 Weblearn has a variety of functions and capabilities available to you to use, and for refrence, see the table of functions, their purpose,

@@ -3,6 +3,7 @@ from __future__ import division
 
 
 from sklearn.linear_model import LinearRegression
+from sklearn.svm import SVC
 import numpy as np
 from flask import Flask
 from flask_cors import CORS, cross_origin
@@ -209,6 +210,13 @@ def linear_regression(params):
 	predictedYVal = model.predict(predictXVal)
 	return predictedYVal
 
+def support_vector_machine(params):
+	x = params[0]
+	y = params[1]
+	predict = params[2]
+	clf = SVC()
+	clf.fit(x, y)
+	return(clf.predict([predict]))
 
 
 ####################################### SERVER LOGISTICS #################################

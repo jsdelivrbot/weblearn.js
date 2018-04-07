@@ -1,4 +1,4 @@
-Warning: this documentation is not complete
+Warning: this documentation is not all of weblearn
 # Weblearn.js
 Weblearn.js is a javascript library which allows web developers to perform advanced mathematical
 tasks and rudimentary machine learning in the browser. Recognizing that JavaScript is, in most cases,

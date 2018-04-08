@@ -28,6 +28,7 @@ function execute(){
 //weblearn(funcID,params);
 
 function acceptWeblearnResult(param){
+	console.log(param)
     var resultDiv = document.getElementById("result");
     resultDiv.innerHTML = "";
     resultDiv.appendChild(htmlToElement(param.toString()));

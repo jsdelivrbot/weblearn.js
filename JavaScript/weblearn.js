@@ -17,6 +17,12 @@ function asyncStuff(funcID,params){
         else if(funcID=="linear_regression"){
           var finalResult = parseInt(result.substring(1,result.length-2));
         }
+        else if(funcID=="support_vector_machine"){
+          var finalResult = result[0];
+        }
+        else if(funcID=="neural_network"){
+          var finalResult = result;
+        }
         else{
           var finalResult = result;
         }

@@ -1,4 +1,3 @@
-WARNING: This documentation is incomplete
 # Welcome to Weblearn.js
 Weblearn.js is a javascript library which allows web developers to perform advanced mathematical
 tasks and rudimentary machine learning in the browser. Recognizing that JavaScript is, in most cases,
@@ -29,6 +28,12 @@ This will output "3,3,3" in the console.
 
 |    Function ID    |          Use          |                     Parameters                    |                                        Return                                        |
 |:-----------------:|:---------------------:|:-------------------------------------------------:|:------------------------------------------------------------------------------------:|
+| `linear_regression`      | predicts points by training a regression model based on x,y points        | `[[x1,x2,x3...],[y1,y2,y3...],prediction_value]` | A single rounded int corresponding to the predicted value of the input point `prediction_value` |
+| `support_vector_machine`      | predicts labels by training an SVM model based on feature vectors and corresponding labels         | `[[[feature_vector_1], [feature_vector_2],..,[feature_vector_n]],[[label_1,label_2,...,label_n]],[prediction_feature_vector_1,...,prediction_feature_vector_z]]` | a list containing the labels corresponding to all features put in as a `prediction_feature_vector` |
+| `neural_network`      | predicts labels by training multilayer perceptron feedforward neural network based on feature vectors and corresponding labels         | `[[[feature_vector_1], [feature_vector_2],..,[feature_vector_n]],[[label_1,label_2,...,label_n]],[prediction_feature_vector_1,...,prediction_feature_vector_z]]` | a list containing the labels corresponding to all features put in as a `prediction_feature_vector` |
 | `vector_add`      | adds two vectors      | `[[vector_one],[vector_two]]`                     | a vector of length same as`vector_one` and `vector_two`, with the added values       |
 | `vector_subtract` | subtracts two vectors | `[[vector_one],[vector_two]]`                     | a vector of length same as`vector_one` and `vector_two`, with the subtracted values  |
 | `vector_sum`      | sums n vectors        | `[[vector_one],[vector_two],[vector_three], etc]` | a vector of length same as all the vectors in the parameters, with the summed values |
+
+
+multilayer perceptron feedforward neural network

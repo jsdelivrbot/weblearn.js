@@ -1,9 +1,11 @@
 from __future__ import division
 #NOTHING BEFORE THIS>> ALL IMPORTS BELOW
 
-
+#sklearn imports
 from sklearn.linear_model import LinearRegression
 from sklearn.svm import SVC
+from sklearn.neural_network import MLPClassifier
+
 import numpy as np
 from flask import Flask
 from flask_cors import CORS, cross_origin
@@ -217,7 +219,14 @@ def support_vector_machine(params):
 	clf = SVC()
 	clf.fit(x, y)
 	return(clf.predict([predict]))
-
+def neural_network(params):
+    x = params[0]
+    y = params[1]
+    predict = params[2]
+    clf = MLPClassifier(solver='lbfgs', alpha=1e-5, 
+                            hidden_layer_sizes=(5, 2), random_state=1)
+    clf.fit(x, y)
+    return clf.predict(predict)
 
 ####################################### SERVER LOGISTICS #################################
 

@@ -34,6 +34,3 @@ This will output "3,3,3" in the console.
 | `vector_add`      | adds two vectors      | `[[vector_one],[vector_two]]`                     | a vector of length same as`vector_one` and `vector_two`, with the added values       |
 | `vector_subtract` | subtracts two vectors | `[[vector_one],[vector_two]]`                     | a vector of length same as`vector_one` and `vector_two`, with the subtracted values  |
 | `vector_sum`      | sums n vectors        | `[[vector_one],[vector_two],[vector_three], etc]` | a vector of length same as all the vectors in the parameters, with the summed values |
-
-
-multilayer perceptron feedforward neural network

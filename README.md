@@ -23,7 +23,7 @@ function acceptWeblearnResult(result){
     console.log(result);
 }
 ```
-This will output "3,3,3" in the console.
+This will output "4,4,4" in the console.
 #### Functions List and Other Information
 
 |    Function ID    |          Use          |                     Parameters                    |                                        Return                                        |

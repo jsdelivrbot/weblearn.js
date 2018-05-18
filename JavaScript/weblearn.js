@@ -25,8 +25,8 @@ function asyncStuff(funcID,params){
         }
         else{
           var finalResult = result;
-        }
-        //var finalResult = (stringTo1DArray(result));
+       
+     //var finalResult = (stringTo1DArray(result));
         acceptWeblearnResult(finalResult);
       },
       error: function(error){

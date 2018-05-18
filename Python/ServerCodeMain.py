@@ -1,10 +1,21 @@
 from __future__ import division
 #NOTHING BEFORE THIS>> ALL IMPORTS BELOW
 
-#sklearn imports
+#sklearn model imports
 from sklearn.linear_model import LinearRegression
 from sklearn.svm import SVC
 from sklearn.neural_network import MLPClassifier
+
+#sklearn dataset imports
+from sklearn import datasets
+iris = datasets.load_iris() #classification
+digits = datasets.load_digits() #classification
+boston = datasets.load_boston() #regression
+diabetes = datasets.load_diabetes() #regression
+linnerud = datasets.load_linnerud() #multivariate regression
+wine = datasets.load_wine() #classification
+breast_cancer = datasets.load_breast_cancer() #classifications
+
 
 import numpy as np
 from flask import Flask
@@ -66,7 +77,7 @@ def get_column(params):
     A = params[0]
     i = params[1]
     return [A_i[j]
-        for A_i in A]
+       for A_i in A]
 
 #make matrix - func in param tries to eval in exec, so don't use
 def make_matrix(params):

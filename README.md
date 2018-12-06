@@ -7,7 +7,7 @@ web browsers, Weblearn funcionality is based entirely in Python on servers. Webl
 anything from education to face recognition. Read on for more information.
 
 ## Setup
-Setting up Weblearn for use on your website is as simple as a JavaScript import, simply paste `<script src="https://cdn.rawgit.com/prathgan/weblearn.js/2b4682e4c77480922d4816280c08162a2da42177/JavaScript/weblearn.js"></script>` (valid as of build on 04/02/2018) <b>before</b> any other JavaScript imports or code in your HTML file. Then, anywhere you choose
+Setting up Weblearn for use on your website is as simple as a JavaScript import, simply paste `<script src="https://cdn.jsdelivr.net/gh/prathgan/weblearn.js@2b4682e4c77480922d4816280c08162a2da42177/JavaScript/weblearn.js"></script>` (valid as of build on 04/02/2018) <b>before</b> any other JavaScript imports or code in your HTML file. Then, anywhere you choose
 below that import, insert your script.
 
 ## Use
